@@ -36,7 +36,7 @@ namespace Changeling.Modules
             EmbeddedResource selectedResource = ((EmbeddedResource)resources.FirstOrDefault(x => x.Name.EndsWith(options.ResourceName)));
             if (selectedResource != null)
             {
-                EmbeddedResource newResource = new EmbeddedResource(options.ResourceName, selectedResource.Attributes, File.ReadAllBytes(options.Filename));
+                EmbeddedResource newResource = new EmbeddedResource(selectedResource.Name, selectedResource.Attributes, File.ReadAllBytes(options.Filename));
                 assemblyDef.MainModule.Resources.Remove(selectedResource);
                 assemblyDef.MainModule.Resources.Add(newResource);
                 assemblyDef.Write(options.OutputFile);
