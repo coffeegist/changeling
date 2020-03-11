@@ -37,6 +37,7 @@ steps:
 
 - task: GitHubRelease@1
   inputs:
+    gitHubConnection: 'audrummer15'
     repositoryName: '$(Build.Repository.Name)'
     action: 'create'
     target: '$(Build.SourceVersion)'
