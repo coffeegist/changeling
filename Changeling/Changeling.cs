@@ -44,6 +44,7 @@ namespace Changeling
                 helpText = new HelpText();
                 helpText.Heading = CHANGELING_BANNER;
                 helpText.Heading += "\n" + "v1.0";
+                helpText.AddDashesToOption = true;
             }
             else
             {
@@ -51,6 +52,7 @@ namespace Changeling
                 {
                     h.Copyright = "";
                     h.Heading = CHANGELING_BANNER;
+                    h.AddDashesToOption = true;
 
                     return HelpText.DefaultParsingErrorsHandler(result, h);
                 }, e => e, true);
