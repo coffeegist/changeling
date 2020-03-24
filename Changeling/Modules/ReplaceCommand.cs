@@ -7,7 +7,7 @@ using CommandLine;
 
 namespace Changeling.Modules
 {
-    [Verb("replace", HelpText = "Extract embedded resources from a .NET binary.")]
+    [Verb("replace", HelpText = "Replace embedded resources from a .NET binary.")]
     public class ReplaceCommandOptions : BaseCommandOptions
     {
         [Option('r', "resource", Required = true, HelpText = "The name of the resource to replace.")]
