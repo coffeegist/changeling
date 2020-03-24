@@ -31,6 +31,8 @@ namespace Changeling.Modules
                 Console.WriteLine($"{resource.Name}");
             }
 
+            Console.WriteLine();
+
             return 0;
         }
     }
